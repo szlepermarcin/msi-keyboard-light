@@ -1,0 +1,61 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           msi-keyboard-light
+version:        0.1.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/msi-keyboard-haskell#readme>
+homepage:       https://github.com/githubuser/msi-keyboard-light#readme
+bug-reports:    https://github.com/githubuser/msi-keyboard-light/issues
+author:         Marcin Szleper <marcin.szleper@gmail.com>
+maintainer:     Marcin Szleper <marcin.szleper@gmail.com>
+copyright:      2020 Marcin Szleper
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/msi-keyboard-light
+
+library
+  exposed-modules:
+      Hid
+      MsiKeyboard
+  other-modules:
+      Paths_msi_keyboard_light
+  hs-source-dirs:
+      src
+  extra-libraries:
+      hidapi-libusb
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , mtl
+    , text
+    , yaml
+  default-language: Haskell2010
+
+executable msi-keyboard-light
+  main-is: Main.hs
+  other-modules:
+      Paths_msi_keyboard_light
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , msi-keyboard-light
+    , mtl
+    , text
+    , yaml
+  default-language: Haskell2010

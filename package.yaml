@@ -1,0 +1,36 @@
+name:                msi-keyboard-light
+version:             0.1.0
+github:              "githubuser/msi-keyboard-light"
+license:             MIT
+author:              "Marcin Szleper <marcin.szleper@gmail.com>"
+maintainer:          "Marcin Szleper <marcin.szleper@gmail.com>"
+copyright:           "2020 Marcin Szleper"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/githubuser/msi-keyboard-haskell#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- mtl
+- bytestring
+- containers
+- text
+- aeson
+- yaml
+
+library:
+  source-dirs: src
+  extra-libraries: hidapi-libusb
+
+executables:
+  msi-keyboard-light:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - msi-keyboard-light
