@@ -1,0 +1,24 @@
+default:
+  left: { color: white, intensity: high }
+  middle: { color: white, intensity: high }
+  right: { color: white, intensity: high }
+italy:
+  left: { color: green, intensity: high }
+  middle: { color: white, intensity: high }
+  right: { color: red, intensity: high }
+spain:
+  left: { color: red, intensity: high }
+  middle: { color: yellow, intensity: high }
+  right: { color: red, intensity: high }
+portugal:
+  left: { color: green, intensity: high }
+  middle: { color: red, intensity: high }
+  right: { color: red, intensity: high }
+france:
+  left: { color: blue, intensity: high }
+  middle: { color: white, intensity: high }
+  right: { color: red, intensity: high }
+poland:
+  left: { color: white, intensity: high }
+  middle: { color: red, intensity: light }
+  right: { color: red, intensity: high }
